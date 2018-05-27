@@ -1,9 +1,13 @@
 Mementos: Easily Create Commemorative Digital Tokens
 
 Fabio Hildebrand
+
 John Gordon
+
 Martin Diz
+
 Solange Gueiros
+
 
 
 Inspiration
