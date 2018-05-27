@@ -1,63 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>My Tokens</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <script src="./stuff/web3.min.js"></script>
-  <link rel="stylesheet" href="./stuff/bootstrap.min.css">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Momentos: Redeem</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="HandheldFriendly" content="true">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
-
-<script type="text/javascript" src="./mint.js"></script>
-
 <body>
-  <br>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <img src="https://ipfs.io/ipfs/QmfUXJfGw1MRhVWHNP9vRkf7VRsZPrBZo3hE7Po8kEG4ej" class="img-fluid">
-        <h3 class="text-center">Nome</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam sagittis risus at feugiat. Sed a tortor non dui euismod facilisis. Maecenas non neque nec ex mattis commodo sed eget turpis. </p>
-        <button type="button" class="btn btn-primary btn-block" onclick="transfer()">Transfer</button>
+      <div class="one-half column" style="margin-top: 2%">
+        <h3><a href="index.html">Momentos</a></h3>
+        <h4>My Tokens</h4>
+       <p>Show tokens here.</p>
       </div>
-    </div>
   </div>
-  <br>
+  </div>
 
-  <script>
-    var myAddress = web3.eth.coinbase
-
-    if (!myAddress) {
-      alert("Please use a browser compatible with Ethereum");
-    }
-
-    var transactionObject = {
-      from: myAddress,
-      gas: 900000,
-      gasPrice: 3000000000
-    };
-
-    let tokens = []
-    NFTContract.balanceOf.call(myAddress, (error, result) => {
-      if (error) console.log(error)
-      else {
-        console.log(result)
-        for (i = 0; i < result; i++) {
-          NFTContract.tokenByIndex.call(i, (error, token) => {
-            if (error) console.log(error)
-            else {
-              console.log(token)
-              tokens.push(token)
-            }
-          })
-        }
-      }
-    })
-
-  </script>
-
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-
 </html>
