@@ -20,6 +20,10 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: #444444;
+}
+
 #logo {
   /*font*/
   font-family: 'Hind', sans-serif;
