@@ -9,13 +9,13 @@ nav a {
   float: left;
   /*We're just setting up fonts settings here*/
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
   /*Padding Our Box*/
-  padding-top: 16px;
-  padding-right: 10px;
+  padding-top: 20px;
+  padding-right: 5px;
   padding-bottom: 10px;
-  padding-left: 10px;
+  padding-left: 5px;
   /*Let's remove the dumb link decoration*/
   text-decoration: none;
 }
@@ -27,7 +27,7 @@ nav a:hover {
 #logo {
   /*font*/
   font-family: 'Hind', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: -2px;
   text-shadow: 1px 1px 2px #c4c4c4;
   /*box*/
