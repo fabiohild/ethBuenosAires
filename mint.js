@@ -13,8 +13,6 @@ request.open("GET", "./build/zos.local.json", false);
 request.send(null)
 var zos = JSON.parse(request.responseText);
 
-console.log(NFT)
-
 
 // Init web3
 var Web3 = require('web3');
