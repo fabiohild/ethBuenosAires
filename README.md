@@ -39,7 +39,7 @@ Javascript
 HTML
 CSS
 
-
+Smart contracts:
 https://github.com/mestorlx/ethBA
 
 
