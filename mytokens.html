@@ -21,12 +21,18 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-
+  <link rel="stylesheet" href="stuff/bootstrap.min.css">
+  <link rel="stylesheet" href="css/nav.css">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
  <!-- Javascript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="./stuff/buffer.js"></script>
   <script type="text/javascript" src="./stuff/web3.min.js"></script>
   <script src="https://unpkg.com/ipfs-api@9.0.0/dist/index.js" integrity="sha384-5bXRcW9kyxxnSMbOoHzraqa7Z0PQWIao+cgeg327zit1hz5LZCEbIMx/LWKPReuB" crossorigin="anonymous"></script>
@@ -35,19 +41,26 @@
 
 </head>
 <body>
+<!-- Navbar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <nav>
+    <a id="logo" href="/">Mementos</a>
+    <a href="/mint.html">Create</a>
+    <a href="/redeem.html">Redeeem</a>
+    <a href="/mytokens.html">My Mementos</a>
+  </nav>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
       <div class="one-half column" style="margin-top: 2%">
-        <h3><a href="index.html">Momentos</a></h3>
-        <h4>My Tokens</h4>
-       <p>Show tokens here.</p>
+        <h4>My mementos</h4>
+       <pre id="mementos"></pre>
       </div>
   </div>
   </div>
-  <button type="button" class="button button-primary" onclick="test()">Create Token</button>
+  <!--button type="button" class="button button-primary" onclick="test()">Create Token</button-->
 
 
 <!-- End Document
