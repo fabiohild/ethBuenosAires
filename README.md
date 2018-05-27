@@ -1,19 +1,20 @@
 Mementos: Easily Create Commemorative Digital Tokens
 
 It's at Ropsten Testnet
+
 http://mementos.chainblocks.com.br
 
 https://fabiohild.github.io
 
 
 
-Fabio Hildebrand
+- Fabio Hildebrand
 
-John Gordon
+- John Gordon
 
-Martin Diz
+- Martin Diz
 
-Solange Gueiros
+- Solange Gueiros
 
 
 Inspiration
