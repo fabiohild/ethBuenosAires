@@ -15,7 +15,7 @@ NFTContract.balanceOf.call(myAddress, (error, result) => {
                 let card = '<div class="col-sm-4" style="margin-top: 0%">\
                     <img class="img-fluid img-thumbnail rounded" src="' + json['image'] + '">\
                     <br><br><h3 class="text-center">' + json['name'] + '</h3>\
-                    <p>' + json['description'] + '</p><br>\
+                    <p class="text-center">' + json['description'] + '</p><br>\
                     </div>'
                 var deck = document.getElementById("mementos");
                 deck.insertAdjacentHTML('beforeend', card);
