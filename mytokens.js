@@ -46,6 +46,7 @@ $(document).on('click', '.transfer-btn', function () {
   };
 
   var to = prompt("Please enter destination address", "0x");
+  if (!to) return;
 
   NFTContract.transferFrom.sendTransaction(myAddress, to, this.id, transactionObject, (error, transaction) => {
     console.log(transaction)
