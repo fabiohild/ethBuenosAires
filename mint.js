@@ -1,5 +1,20 @@
 // Web3 stuff
-//contractAddress = "0x1554e84ddcd54146fc4764f9f2a016e806035b17"
+
+var request = new XMLHttpRequest();
+request.open("GET", "./build/NFT.json", false);
+request.send(null)
+var NFT = JSON.parse(request.responseText);
+
+request.open("GET", "./build/NFTStore.json", false);
+request.send(null)
+var NFTStore = JSON.parse(request.responseText);
+
+request.open("GET", "./build/zos.local.json", false);
+request.send(null)
+var zos = JSON.parse(request.responseText);
+
+console.log(NFT)
+
 
 // Init web3
 var Web3 = require('web3');
@@ -15,8 +30,8 @@ if (typeof web3 !== 'undefined') {
   console.log("infura")
 }
 
-//certificateContract = web3.eth.contract(contractAbi).at(contractAddress);
-
+NFTContract = web3.eth.contract(NFT.abi).at("0xdbee2884ec55d52ce37c9f95904e02465c46292c");
+NFTStoreContract = web3.eth.contract(NFTStore.abi).at("0x378e7bb2f08d4f79710afd03daaab56b4621711f");
 
 function upload() {
   const reader = new FileReader();
@@ -52,4 +67,46 @@ function upload() {
 
 function mint(ipfsUri) {
   console.log(ipfsUri)
+
+  var myAddress = web3.eth.coinbase
+
+  if (!myAddress) {
+    alert("Please use a browser compatible with Ethereum");
+    return;
+  }
+
+  var transactionObject = {
+    from: myAddress,
+    gas: 900000,
+    gasPrice: 3000000000
+  };
+
+  var hash = web3.sha3(document.getElementById("password").value)
+  var qtty = document.getElementById("quantity").value
+
+  NFTStoreContract.addCollectible.sendTransaction(hash, ipfsUri, qtty, transactionObject, (error, transaction) => {
+    console.log(transaction)
+  })
+
+}
+
+function redeem() {
+  var password = document.getElementById("password").value
+  var myAddress = web3.eth.coinbase
+
+  if (!myAddress) {
+    alert("Please use a browser compatible with Ethereum");
+  }
+
+  var transactionObject = {
+    from: myAddress,
+    gas: 900000,
+    gasPrice: 3000000000
+  };
+
+  NFTStoreContract.claimCollectible.sendTransaction(myAddress, password, transactionObject, (error, transaction) => {
+    if (error) console.log(error)
+    else console.log(transaction)
+  })
+
 }

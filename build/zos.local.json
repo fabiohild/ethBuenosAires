@@ -1,0 +1,38 @@
+{
+  "contracts": {
+    "NFT": {
+      "address": "0xdb56f2e9369e0d7bd191099125a3f6c370f8ed15",
+      "bytecodeHash": "9e8b4911051afc713132c5a1ee722a2ed1d59926606661f1bcfd8b55e013e8ad"
+    },
+    "NFTStore": {
+      "address": "0xa94b7f0465e98609391c623d0560c5720a3f2d33",
+      "bytecodeHash": "52566af5b69b5dc3638ce5dbc246697b8eeadeed2c586f79d7a83af31f80bca9"
+    }
+  },
+  "proxies": {
+    "NFT": [
+      {
+        "address": "0x5109f62e4e0ca152f5543e59e42dc0360c3aed25",
+        "version": "0.1.alpha",
+        "implementation": "0xdb56f2e9369e0d7bd191099125a3f6c370f8ed15"
+      }
+    ],
+    "NFTStore": [
+      {
+        "address": "0x5fd287667ac7d13161648e82da6e8b8a3c9bc432",
+        "version": "0.1.alpha",
+        "implementation": "0xa94b7f0465e98609391c623d0560c5720a3f2d33"
+      }
+    ]
+  },
+  "app": {
+    "address": "0x0e696947a06550def604e82c26fd9e493e576337"
+  },
+  "version": "0.1.alpha",
+  "package": {
+    "address": "0xa57b8a5584442b467b4689f1144d269d096a3daf"
+  },
+  "provider": {
+    "address": "0x26b4afb60d6c903165150c6f0aa14f8016be4aec"
+  }
+}
