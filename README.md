@@ -1,5 +1,8 @@
 Mementos: Easily Create Commemorative Digital Tokens
 
+It's at Ropsten Testnet
+http://mementos.chainblocks.com.br
+
 https://fabiohild.github.io
 
 
